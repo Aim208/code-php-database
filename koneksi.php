@@ -1,10 +1,12 @@
 <?php
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db   = "db_bukutamu"; // Pastikan nama database ini benar
 
-$koneksi = mysqli_connect("localhost","root","","sekolah");
+$koneksi = mysqli_connect($host, $user, $pass, $db);
 
-// Check connection
-if (mysqli_connect_errno()){
-    echo "Koneksi database gagal : " . mysqli_connect_error();
+if (!$koneksi) {
+    die("Koneksi ke database gagal: " . mysqli_connect_error());
 }
-
 ?>
